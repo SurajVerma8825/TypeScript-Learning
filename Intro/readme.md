@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Typescript%20Fundamentals%20(Setup%20%2B%20Basics)-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
 </p>
 
-<h1 align="center">🟦 TypeScript Fundamentals — Day 01–03
+<h1 align="center">🟦 TypeScript Fundamentals — Day 01–04
 <br> <span style="font-size:16px;">Installation • tsconfig • Types • Type Annotations • Type Inference</span></h1>
 
 <p align="center">
@@ -158,7 +158,51 @@ let isReady: boolean = true;
 
 ---
 
-# 🧮 **Type Inference (TS Smarter Than You 🤭)**
+# 🧮 **Type Inference (TS Smarter Than You 🤭)
+
+---
+
+# 🧩 **Union Types**
+
+Union types allow a variable to accept **multiple possible types**.
+
+```ts
+let id: string | number;
+id = 101;     // ✔ valid
+id = "ABC";   // ✔ valid
+```
+
+### ✔ Where Unions Help?
+
+* API responses with mixed types
+* Function parameters accepting different data shapes
+* Flexible coding with safety
+
+---
+
+# 🔘 **The Any Type**
+
+`any` sabse flexible aur sabse risky type hota hai.
+
+```ts
+let data: any = 10;
+data = "hello";
+data = true;
+```
+
+### ⚠️ Why Avoid `any`?
+
+* Type safety khatam ho jaati hai
+* IntelliSense weak ho jata hai
+* Errors compile‑time pe detect nahi hote
+
+### ✔ When `any` is Useful?
+
+* Migrating old JavaScript projects
+* Unknown third‑party data
+* Quick prototyping
+
+---**
 
 Agar aap type nahi dete, TS automatically detect kar leta hai:
 
@@ -218,6 +262,22 @@ node dist/index.js
 | Type Annotations      | ✅ Done |
 | Type Inference        | ✅ Done |
 | Compilation           | ✅ Done |
+
+# 📌 **Summary Till Now**
+
+| Topic                 | Status |
+| --------------------- | ------ |
+| What is TypeScript?   | ✅ Done |
+| Installation          | ✅ Done |
+| tsconfig Setup        | ✅ Done |
+| Best Compiler Options | ✅ Done |
+| First Code            | ✅ Done |
+| Basic Types           | ✅ Done |
+| Type Annotations      | ✅ Done |
+| Type Inference        | ✅ Done |
+| Compilation           | ✅ Done |
+| Union Types           | ✅ Done |
+| Any Type              | ✅ Done |
 
 Upcoming Topics:
 ➡️ Functions, Union Types, Type Aliases, Interfaces, Classes, Narrowing, Enums etc.
