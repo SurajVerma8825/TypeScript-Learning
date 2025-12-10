@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Typescript%20Fundamentals%20(Setup%20%2B%20Basics)-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
 </p>
 
-<h1 align="center">🟦 TypeScript Fundamentals — Day 01–04
+<h1 align="center">🟦 TypeScript Fundamentals — Day 01–05
 <br> <span style="font-size:16px;">Installation • tsconfig • Types • Type Annotations • Type Inference</span></h1>
 
 <p align="center">
@@ -25,7 +25,91 @@
 * [🧮 Type Inference](#-type-inference)
 * [🔧 Compiling TypeScript](#-compiling-typescript)
 * [▶️ Running Compiled Code](#️-running-compiled-code)
-* [📌 Summary Till Now](#-summary-till-now)
+* [📌 🔧 Compiling TypeScript
+
+```bash
+node dist/index.js
+```
+
+---
+
+# 🛡️ **Type Narrowing & Type Guards**
+
+Type narrowing se TypeScript runtime conditions ke basis par variable ka type **automatically refine** karta hai.
+
+### ✔ `typeof` Narrowing
+
+```ts
+function printValue(value: string | number) {
+  if (typeof value === "string") {
+    console.log(value.toUpperCase());
+  } else {
+    console.log(value.toFixed(2));
+  }
+}
+```
+
+### ✔ Truthiness Narrowing
+
+```ts
+function processInput(input?: string) {
+  if (!input) return "No Input";
+  return input.toLowerCase();
+}
+```
+
+### ✔ Equality Narrowing
+
+```ts
+function compare(x: number | string, y: number | string) {
+  if (x === y) {
+    return "Same";
+  }
+}
+```
+
+### ✔ Custom Type Guards
+
+```ts
+function isNumber(val: any): val is number {
+  return typeof val === "number";
+}
+
+function process(val: number | string) {
+  if (isNumber(val)) {
+    return val.toFixed(2);
+  }
+  return val.toUpperCase();
+}
+```
+
+---
+
+# 📌 **Summary Till Now**
+
+| Topic                 | Status |
+| --------------------- | ------ |
+| What is TypeScript?   | ✅ Done |
+| Installation          | ✅ Done |
+| tsconfig Setup        | ✅ Done |
+| Best Compiler Options | ✅ Done |
+| First Code            | ✅ Done |
+| Basic Types           | ✅ Done |
+| Type Annotations      | ✅ Done |
+| Type Inference        | ✅ Done |
+| Compilation           | ✅ Done |
+| Union Types           | ✅ Done |
+| Any Type              | ✅ Done |
+| Type Narrowing        | ✅ Done |
+| Type Guards           | ✅ Done |
+
+Upcoming Topics:
+➡️ Functions, Type Aliases, Interfaces, Classes, Enums, Generics
+
+---
+
+# ✨ **Author**](#-summary-till-now)
+
 * [✨ Author](#-author)
 
 ---
