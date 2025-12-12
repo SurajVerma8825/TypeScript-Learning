@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Typescript%20Fundamentals%20(Setup%20%2B%20Basics)-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
 </p>
 
-<h1 align="center">🟦 TypeScript Fundamentals — Day 01–07
+<h1 align="center">🟦 TypeScript Fundamentals — Day 01–08
 <br> <span style="font-size:16px;">Installation • tsconfig • Types • Type Annotations • Type Inference</span></h1>
 
 <p align="center">
@@ -168,7 +168,78 @@ cfg.appName = "ChaiCode"; // ❌ Error
 | Type Guards           | ✅ Done |
 | Types vs Interfaces   | ✅ Done |
 
+# 🧩 **Object Types & Utility Types**
+
+TypeScript objects ko handle karne ke liye powerful utility types deta hai jo data structures ko aur predictable banate hain.
+
+### ✔ Optional & Required Properties
+
+```ts
+type ChaiOrder = {
+  name?: string;
+  quantity?: number;
+};
+```
+
+`Required<T>` sab optional properties ko required bana deta hai:
+
+```ts
+const placeOrder = (order: Required<ChaiOrder>) => {
+  console.log(order);
+};
+```
+
+### ✔ Pick
+
+Kisi type ke specific properties ko choose karna:
+
+```ts
+type User = {
+  id: number;
+  username: string;
+  email: string;
+};
+
+type PublicProfile = Pick<User, "username">;
+```
+
+### ✔ Omit
+
+Kisi type se selected properties ko remove karna:
+
+```ts
+type PrivateUser = Omit<User, "email">;
+```
+
+---
+
+# 📌 **Summary Till Now**
+
+| Topic                  | Status |
+| ---------------------- | ------ |
+| What is TypeScript?    | ✅ Done |
+| Installation           | ✅ Done |
+| tsconfig Setup         | ✅ Done |
+| Best Compiler Options  | ✅ Done |
+| First Code             | ✅ Done |
+| Basic Types            | ✅ Done |
+| Type Annotations       | ✅ Done |
+| Type Inference         | ✅ Done |
+| Compilation            | ✅ Done |
+| Union Types            | ✅ Done |
+| Any Type               | ✅ Done |
+| Type Narrowing         | ✅ Done |
+| Type Guards            | ✅ Done |
+| Types vs Interfaces    | ✅ Done |
+| Pick / Omit / Required | ✅ Done |
+
 Upcoming Topics:
+➡️ Functions, Classes, Enums, Generics
+
+---
+
+# ✨ **Author**
+
 ➡️ Functions, Type Aliases, Classes, Enums, Generics
 
 ---
