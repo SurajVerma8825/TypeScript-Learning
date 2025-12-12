@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Typescript%20Fundamentals%20(Setup%20%2B%20Basics)-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
 </p>
 
-<h1 align="center">🟦 TypeScript Fundamentals — Day 01–05
+<h1 align="center">🟦 TypeScript Fundamentals — Day 01–07
 <br> <span style="font-size:16px;">Installation • tsconfig • Types • Type Annotations • Type Inference</span></h1>
 
 <p align="center">
@@ -103,7 +103,78 @@ function process(val: number | string) {
 | Type Narrowing        | ✅ Done |
 | Type Guards           | ✅ Done |
 
+# 🧩 **Types and Interfaces**
+
+Typescript me **type aliases** aur **interfaces** dono object structures define karne ke liye use hote hain, lekin dono ka behaviour kuch alag hota hai.
+
+### ✔ Type Alias
+
+```ts
+type User = {
+  username: string;
+  bio?: string;
+};
+```
+
+### ✔ Interface
+
+```ts
+interface User {
+  username: string;
+}
+```
+
+### ✔ Interface Extending
+
+```ts
+interface Admin extends User {
+  role: string;
+}
+```
+
+### ✔ Readonly Properties
+
+```ts
+type Config = {
+  readonly appName: string;
+  version: number;
+};
+```
+
+Readonly ka matlab property update nahi ho sakti:
+
+```ts
+cfg.appName = "ChaiCode"; // ❌ Error
+```
+
+---
+
+# 📌 **Summary Till Now**
+
+| Topic                 | Status |
+| --------------------- | ------ |
+| What is TypeScript?   | ✅ Done |
+| Installation          | ✅ Done |
+| tsconfig Setup        | ✅ Done |
+| Best Compiler Options | ✅ Done |
+| First Code            | ✅ Done |
+| Basic Types           | ✅ Done |
+| Type Annotations      | ✅ Done |
+| Type Inference        | ✅ Done |
+| Compilation           | ✅ Done |
+| Union Types           | ✅ Done |
+| Any Type              | ✅ Done |
+| Type Narrowing        | ✅ Done |
+| Type Guards           | ✅ Done |
+| Types vs Interfaces   | ✅ Done |
+
 Upcoming Topics:
+➡️ Functions, Type Aliases, Classes, Enums, Generics
+
+---
+
+# ✨ **Author**
+
 ➡️ Functions, Type Aliases, Interfaces, Classes, Enums, Generics
 
 ---
